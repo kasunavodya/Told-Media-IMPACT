@@ -21,6 +21,47 @@
 
     <link rel="stylesheet" href="assets/css/bootstrap1.min.css">
 
+    <style>
+    .gradientDiv{
+    padding: 5px;
+    background: linear-gradient(to right, #f414fa, #000000);
+    box-shadow: 0px 0px 30px #f414fa,
+    0px 0px 10px #000000;
+    animation: animate 3s infinite;
+
+    }
+
+    @keyframes animate{
+    0%{
+        background: linear-gradient(to right, #f414fa, #000000);
+        box-shadow: 0px 0px 30px #f414fa,
+            0px 0px 10px #000000;
+    }
+
+    50%{
+        background: linear-gradient(to right, #000000, #f414fa );
+        box-shadow: 0px 0px 30px #000000,
+            0px 0px 10px #f414fa;
+    }
+
+    100%{
+        background: linear-gradient(to right, #f414fa, #000000);
+        box-shadow: 0px 0px 30px #f414fa,
+            0px 0px 10px #000000;
+    }
+    }
+
+    .innerDiv{
+    background: linear-gradient(to right, #595656, #333);;
+    }
+
+    .inner_div{
+    background: transparent;
+    transform: translate(10%,10%);
+    color: #fff;
+    }
+    </style>
+
     <script>
         function changeImage(imageSrc) {
             var displayedImage = document.getElementById('displayedImage');
@@ -243,41 +284,72 @@
                     </div>
 
                     <div class="containerNew">
-                        <div class="box box-studio"
-                            onclick="changeImage('https://i.pinimg.com/736x/09/f2/a8/09f2a8a98430c8d410bfd305b4d1973d--planks-film-camera.jpg')">
-                            <h2 class = "text-dark">STUDIO</h2>
+                        <div class="card" style = "padding: 2%;" onclick="changeImage('https://cdn.dribbble.com/userupload/2644975/file/original-26c272338ca006f1666ec20189d85eb9.png?resize=400x0')">
+                            <h1 class = "text-dark"><center>SOCIAL</center></h1>
+                            <div class="tag-container" style = "justify-content: center;">
+                                <span class="tag">Content Creation</span>
+                                <span class="tag">Reporting</span>
+                                <span class="tag">Campaigns</span>
+                            </div>
+                            <div class="tag-container" style = "justify-content: center;">
+                                <span class="tag">Promotional Design</span>
+                                <span class="tag">Community Management</span>
+                            </div>
                         </div>
-                        <div class="tag-container">
-                            <span class="tag">Filmmaking</span>
-                            <span class="tag">Photography</span>
-                            <span class="tag">Animation</span>
-                            <span class="tag">Gradinge</span>
-                        </div>
+                          
                         <div class="rowNew">
                             <div class="box box-web"
                                 onclick="changeImage('https://www.xi-digital.com/uploads/upload/web_design.jpg')">
-                                <h2 class = "text-dark">WEB</h2>
+                                <div class="card" style = "padding: 3%; margin-top: 10%;">
+                                    <br>
+                                    <h1 class = "text-dark"><center>WEB</center></h1>
+                                    <div class="tag-container" style = "justify-content: center;">
+                                        <span class="tag">&nbsp;Website Design&nbsp;&nbsp;</span>
+                                        <span class="tag">Website Hosting</span>
+                                        <span class="tag">Search Engine Optimization (SEO)</span>
+                                    </div>
+                                    <br><br>
+                                  </div>
                             </div>
                             <div>
+                                <div class="gradientDiv">
+                                <div class="innerDiv">
                                 <img id="displayedImage"
                                     src="https://i.pinimg.com/736x/09/f2/a8/09f2a8a98430c8d410bfd305b4d1973d--planks-film-camera.jpg"
                                     class="img-thumbnail img-responsive">
+                                </div>
+                                </div>
                             </div>
                             <div class="box box-social"
-                                onclick="changeImage('https://st.depositphotos.com/1350793/2816/i/600/depositphotos_28167733-stock-photo-social-networking-concept.jpg')">
-                                <h2 class = "text-dark">SOCIAL</h2>
+                                 onclick="changeImage('https://i.pinimg.com/736x/09/f2/a8/09f2a8a98430c8d410bfd305b4d1973d--planks-film-camera.jpg')">
+                                <div class="card" style = "padding: 3%; margin-top: 10%;">
+                                    <br>
+                                    <h1 class = "text-dark"><center>STUDIO</center></h1>
+                                    <div class="tag-container" style = "justify-content: center;">
+                                        <span class="tag">FilmMaking</span>
+                                        <span class="tag">Photography</span>
+                                        <span class="tag">Post Production</span>
+                                    </div>
+                                    <div class="tag-container" style = "justify-content: center;">
+                                        <span class="tag">3D Animationt</span>
+                                        <span class="tag">Color grading</span>
+                                    </div>
+                                    <br><br>
+                                  </div>
                             </div>
                         </div>
-                        <div class="tag-container" style="margin-top: 10px;">
-                            <span class="tag">Filmmaking</span>
-                            <span class="tag">Photography</span>
-                            <span class="tag">Animation</span>
-                            <span class="tag">Gradinge</span>
-                        </div>
-                        <div class="box box-branding"
-                            onclick="changeImage('https://i.pinimg.com/originals/21/d1/38/21d138e286fda32c420c97462c6990dc.png')">
-                            <h2 class = "text-dark">BRANDING</h2>
-                        </div>
+                        <div class="card" style = "padding: 2%; margin-top: 2%;" onclick="changeImage('https://i.pinimg.com/600x315/d0/ce/11/d0ce11adf6a3315a35095f7831220e73.jpg')">
+                            <h1 class = "text-dark"><center>BRANDING</center></h1>
+                            <div class="tag-container" style = "justify-content: center;">
+                                <span class="tag">Brand Identity Design</span>
+                                <span class="tag">Illustration</span>
+                                <span class="tag">UI Design</span>
+                            </div>
+                            <div class="tag-container" style = "justify-content: center;">
+                                <span class="tag">Packaging Design</span>
+                                <span class="tag">Merch Design</span>
+                            </div>
+                          </div>
                     </div>
                 </div>
             </div>
