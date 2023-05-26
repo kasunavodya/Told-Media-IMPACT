@@ -21,6 +21,48 @@
 
     <link rel="stylesheet" href="assets/css/bootstrap1.min.css">
 
+    <style>
+        .gradientDiv {
+            padding: 5px;
+            background: linear-gradient(to right, #f414fa, #000000);
+            box-shadow: 0px 0px 30px #f414fa,
+                0px 0px 10px #000000;
+            animation: animate 3s infinite;
+
+        }
+
+        @keyframes animate {
+            0% {
+                background: linear-gradient(to right, #f414fa, #000000);
+                box-shadow: 0px 0px 30px #f414fa,
+                    0px 0px 10px #000000;
+            }
+
+            50% {
+                background: linear-gradient(to right, #000000, #f414fa);
+                box-shadow: 0px 0px 30px #000000,
+                    0px 0px 10px #f414fa;
+            }
+
+            100% {
+                background: linear-gradient(to right, #f414fa, #000000);
+                box-shadow: 0px 0px 30px #f414fa,
+                    0px 0px 10px #000000;
+            }
+        }
+
+        .innerDiv {
+            background: linear-gradient(to right, #595656, #333);
+            ;
+        }
+
+        .inner_div {
+            background: transparent;
+            transform: translate(10%, 10%);
+            color: #fff;
+        }
+    </style>
+
     <script>
         function changeImage(imageSrc) {
             var displayedImage = document.getElementById('displayedImage');
@@ -59,6 +101,7 @@
                             <li class="scroll-to-section"><a href="#top" class="active">HOME</a></li>
                             <li class="scroll-to-section"><a href="#features">OUR WORKS</a></li>
                             <li class="scroll-to-section"><a href="#our-classes">WHAT WE DO</a></li>
+                            <li class="scroll-to-section"><a href="#our-classes">ABOUT US</a></li>
                             <li class="scroll-to-section"><a href="#schedule">BRANDS</a></li>
                             <li class="main-button"><a href="#">CONTACT</a></li>
                         </ul>
@@ -79,7 +122,7 @@
                 src="https://joy1.videvo.net/videvo_files/video/free/2018-05/large_watermarked/180503_02_PurpleGrid_preview.mp4"
                 type="video/mp4" />
         </video>
-        
+
         <div class="video-overlay header-text">
             <div class="caption">
                 <h6>work harder, get stronger</h6>
@@ -89,22 +132,21 @@
                 </div>
             </div>
         </div>
-
-        
-        
     </div>
 
-    
+
     <!-- ***** Main Banner Area End ***** -->
 
     <!-- Background & animion & navbar & title -->
     <div class="container-fluid" style="margin-top: -8px;">
-        
-        <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f414fa" fill-opacity="1" d="M0,32L48,
+
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#000000" fill-opacity="1" d="M0,32L48,
             42.7C96,53,192,75,288,101.3C384,128,480,160,576,186.7C672,213,768,235,864,256C960,277,1056,299,1152,288C1248,
             277,1344,235,1392,213.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,
-            320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-       
+            320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+
         <!-- Background animtion-->
         <div class="background" style="height: auto;">
             <div class="cube"></div>
@@ -112,8 +154,6 @@
             <div class="cube"></div>
             <div class="cube"></div>
             <div class="cube"></div>
-
-            
 
             <div class="py-5">
                 <div class="container">
@@ -254,8 +294,10 @@
         <section class="testimonial" id="testimonial">
             <div class="header">
                 <div style="margin: 3%;">
-                    <h1 class = "text-dark">
-                        <center>WHAT WE DO</center>
+                    <h1 class="text-dark">
+                        <center>
+                            <h2 class="text-primary text-uppercase" style="letter-spacing: 5px;"><b>What We Do</b></h2>
+                        </center>
                     </h1><br>
                     <div class="particles">
                         <div class="particle"></div>
@@ -286,51 +328,132 @@
                     </div>
 
                     <div class="containerNew">
-                        <div class="box box-studio"
-                            onclick="changeImage('https://i.pinimg.com/736x/09/f2/a8/09f2a8a98430c8d410bfd305b4d1973d--planks-film-camera.jpg')">
-                            <h2 class = "text-dark">STUDIO</h2>
+                        <div class="card" style="padding: 2%;"
+                            onclick="changeImage('https://cdn.dribbble.com/userupload/2644975/file/original-26c272338ca006f1666ec20189d85eb9.png?resize=400x0')">
+                            <h1 class="text-dark">
+                                <center>SOCIAL</center>
+                            </h1>
+                            <div class="tag-container" style="justify-content: center;">
+                                <span class="tag">Content Creation</span>
+                                <span class="tag">Reporting</span>
+                                <span class="tag">Campaigns</span>
+                            </div>
+                            <div class="tag-container" style="justify-content: center;">
+                                <span class="tag">Promotional Design</span>
+                                <span class="tag">Community Management</span>
+                            </div>
                         </div>
-                        <div class="tag-container">
-                            <span class="tag">Filmmaking</span>
-                            <span class="tag">Photography</span>
-                            <span class="tag">Animation</span>
-                            <span class="tag">Gradinge</span>
-                        </div>
+
                         <div class="rowNew">
                             <div class="box box-web"
                                 onclick="changeImage('https://www.xi-digital.com/uploads/upload/web_design.jpg')">
-                                <h2 class = "text-dark">WEB</h2>
+                                <div class="card" style="padding: 3%; margin-top: 10%;">
+                                    <br>
+                                    <h1 class="text-dark">
+                                        <center>WEB</center>
+                                    </h1>
+                                    <div class="tag-container" style="justify-content: center;">
+                                        <span class="tag">&nbsp;Website Design&nbsp;&nbsp;</span>
+                                        <span class="tag">Website Hosting</span>
+                                        <span class="tag">Search Engine Optimization (SEO)</span>
+                                    </div>
+                                    <br><br>
+                                </div>
                             </div>
                             <div>
-                                <img id="displayedImage"
-                                    src="https://i.pinimg.com/736x/09/f2/a8/09f2a8a98430c8d410bfd305b4d1973d--planks-film-camera.jpg"
-                                    class="img-thumbnail img-responsive">
+                                <div class="gradientDiv">
+                                    <div class="innerDiv">
+                                        <img id="displayedImage"
+                                            src="https://i.pinimg.com/736x/09/f2/a8/09f2a8a98430c8d410bfd305b4d1973d--planks-film-camera.jpg"
+                                            class="img-thumbnail img-responsive">
+                                    </div>
+                                </div>
                             </div>
                             <div class="box box-social"
-                                onclick="changeImage('https://st.depositphotos.com/1350793/2816/i/600/depositphotos_28167733-stock-photo-social-networking-concept.jpg')">
-                                <h2 class = "text-dark">SOCIAL</h2>
+                                onclick="changeImage('https://i.pinimg.com/736x/09/f2/a8/09f2a8a98430c8d410bfd305b4d1973d--planks-film-camera.jpg')">
+                                <div class="card" style="padding: 3%; margin-top: 10%;">
+                                    <br>
+                                    <h1 class="text-dark">
+                                        <center>STUDIO</center>
+                                    </h1>
+                                    <div class="tag-container" style="justify-content: center;">
+                                        <span class="tag">FilmMaking</span>
+                                        <span class="tag">Photography</span>
+                                        <span class="tag">Post Production</span>
+                                    </div>
+                                    <div class="tag-container" style="justify-content: center;">
+                                        <span class="tag">3D Animationt</span>
+                                        <span class="tag">Color grading</span>
+                                    </div>
+                                    <br><br>
+                                </div>
                             </div>
                         </div>
-                        <div class="tag-container" style="margin-top: 10px;">
-                            <span class="tag">Filmmaking</span>
-                            <span class="tag">Photography</span>
-                            <span class="tag">Animation</span>
-                            <span class="tag">Gradinge</span>
-                        </div>
-                        <div class="box box-branding"
-                            onclick="changeImage('https://i.pinimg.com/originals/21/d1/38/21d138e286fda32c420c97462c6990dc.png')">
-                            <h2 class = "text-dark">BRANDING</h2>
+                        <div class="card" style="padding: 2%; margin-top: 2%;"
+                            onclick="changeImage('https://i.pinimg.com/600x315/d0/ce/11/d0ce11adf6a3315a35095f7831220e73.jpg')">
+                            <h1 class="text-dark">
+                                <center>BRANDING</center>
+                            </h1>
+                            <div class="tag-container" style="justify-content: center;">
+                                <span class="tag">Brand Identity Design</span>
+                                <span class="tag">Illustration</span>
+                                <span class="tag">UI Design</span>
+                            </div>
+                            <div class="tag-container" style="justify-content: center;">
+                                <span class="tag">Packaging Design</span>
+                                <span class="tag">Merch Design</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- About Start -->
+            <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="container">
+                    <div class="row gx-5">
+                        <div class="col-lg-5 mb-5 mb-lg-0">
+                            <div class="position-relative h-100">
+                                <div class="gradientDiv">
+                                    <div class="innerDiv">
+                                        <img id="displayedImage"
+                                            src="https://img.freepik.com/free-photo/group-people-with-smartphones-tablets_273609-10724.jpg?w=900&t=st=1685097842~exp=1685098442~hmac=ef56517f3f9854a7a046f142206896ac715fc93c7ffa90dc35d5a72c3b9b34c5"
+                                            class="img-thumbnail img-responsive w-100 h-100" style="object-fit: cover;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="mb-4">
+                                <h2 class="text-primary text-uppercase" style="letter-spacing: 5px;"><b>About Us</b>
+                                </h2>
+                                <h1 class="display-5 mb-0">Exploring New Frontiers for Brand Growth</h1>
+                            </div>
+                            <p class="mb-5">Welcome to Impact, where we believe in the transformative power of digital
+                                marketing. Our story is one of passion, innovation, and a relentless drive to help
+                                businesses thrive in the dynamic online landscape. <br><br> From our humble beginnings,
+                                we set out on a mission to make a significant impact on brands' success through
+                                cutting-edge digital strategies. Our team of skilled marketers, strategists, and
+                                creatives came together with a shared vision: to harness the limitless possibilities
+                                offered by the digital realm <br><br> As you embark on your digital marketing journey,
+                                we invite you to join us and experience the Impact difference. Let us help you navigate
+                                the complexities of the digital world, unleash your brand's true potential, and create a
+                                lasting impact that resonates with your target audience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- About End -->
         </section>
 
         <div class="container1"
             style="padding: 40px; background-image: linear-gradient(45deg, rgb(78, 0, 109) 10%, rgb(13, 0, 15) 100%);">
             <div style="margin: 3%;">
                 <h1 class="text-white">
-                    <center>BRANDS WE HAVE WORKED WITH</center>
+                    <center>
+                        <h2 class="text-primary text-uppercase" style="letter-spacing: 5px;"><b>BRANDS WE HAVE WORKED
+                                WITH</b></h2>
+                    </center>
                 </h1><br>
                 <div class="row">
                     <div class="logo-container">
@@ -374,25 +497,20 @@
                 </div>
             </div>
         </div>
-        
 
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-light">
-            
             <div class="container py-5">
-                
                 <div class="row g-5">
-                    
                     <div class="col-lg-3 col-md-6">
                         <h4
                             class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
                             Get In Touch</h4>
-                        <p class="mb-4">No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et et dolor sed
-                            dolor</p>
-                        <p class="mb-2"><i class="fa fa-location-arrow text-primary me-3"></i>123 Street, New York, USA
+                        <p class="mb-4">At Impact, we offer a unique proposition that sets us apart from the competition.</p>
+                        <p class="mb-2"><i class="fa fa-location-arrow text-primary me-3"></i>383 1/1 Serpentine Rd, Colombo 08, SL
                         </p>
-                        <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>info@example.com</p>
-                        <p class="mb-0"><i class="fa fa-phone text-primary me-3"></i>+012 345 67890</p>
+                        <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>info@told.media</p>
+                        <p class="mb-0"><i class="fa fa-phone text-primary me-3"></i>+94 770 778653</p>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4
@@ -400,11 +518,10 @@
                             Quick Links</h4>
                         <div class="d-flex flex-column justify-content-start">
                             <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
+                            <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our Works</a>
+                            <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>What We Do</a>
                             <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
-                            <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our Services</a>
-                            <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
-                            <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Latest Blog</a>
-                            <a class="text-light" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                            <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Brands</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -412,47 +529,44 @@
                             class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
                             Popular Links</h4>
                         <div class="d-flex flex-column justify-content-start">
-                            <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
-                            <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
-                            <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our Services</a>
-                            <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
-                            <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Latest Blog</a>
-                            <a class="text-light" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                            <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Social</a>
+                            <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Web</a>
+                            <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Studio</a>
+                            <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Branding</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4
                             class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
-                            Newsletter</h4>
+                            Contact Us</h4>
                         <form action="">
                             <div class="input-group">
-                                <input type="text" class="form-control p-3 border-0" placeholder="Your Email Address">
-                                <button class="btn" style="background-color: #f414fa;">Sign Up</button>
+                                <button class="btn" style="background-color: #f414fa; color: white;"><i class="fa fa-phone text-white" aria-hidden="true"></i>&nbsp;&nbsp;Contact</button>
                             </div>
                         </form>
                         <h6 class="text-primary text-uppercase mt-4 mb-3">Follow Us</h6>
                         <div class="d-flex">
                             <a class="btn btn-lg btn-lg-square rounded-circle me-2" style="background-color: #f414fa;"
-                                href="#"><i class="fa fa-facebook-official"></i></a>
+                                href="#"><i class="fa fa-facebook-official text-white"></i></a>
                             <a class="btn btn-lg btn-lg-square rounded-circle me-2" style="background-color: #f414fa;"
-                                href="#"><i class="fa fa-linkedin-square"></i></a>
+                                href="#"><i class="fa fa-linkedin-square text-white"></i></a>
                             <a class="btn btn-lg btn-lg-square rounded-circle" style="background-color: #f414fa;"
-                                href="#"><i class="fa fa-instagram"></i></a>
+                                href="#"><i class="fa fa-instagram text-white"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
         </div>
         <div class="container-fluid bg-dark text-light border-top border-secondary py-4">
             <div class="container">
                 <div class="row g-5">
                     <div class="col-md-6 text-center text-md-start">
-                        <p class="mb-md-0">&copy; <a class="text-primary" href="#">Your Site Name</a>. All Rights
+                        <p class="mb-md-0">&copy; <a class="text-primary" href="#">Impact</a>. All Rights
                             Reserved.</p>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
-                        <p class="mb-0">Designed by <a class="text-primary" href="https://htmlcodex.com">HTML Codex</a>
+                        <p class="mb-0">Designed by <a class="text-primary" href="https://htmlcodex.com">Told Media PVT LTD</a>
                         </p>
                     </div>
                 </div>

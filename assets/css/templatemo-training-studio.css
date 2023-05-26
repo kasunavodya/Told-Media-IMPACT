@@ -1262,7 +1262,7 @@ responsive
 }
 /* ============= Animation background ========= */
 .background {
-  background: linear-gradient(132deg, #f414fa, #000000, #000000);
+  background: linear-gradient(132deg, #000000, #000000, #000000);
   background-size: 400% 400%;
   animation: Gradient 15s ease infinite;
   position: relative;
