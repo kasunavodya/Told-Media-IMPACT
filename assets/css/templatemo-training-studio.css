@@ -1349,6 +1349,98 @@ nav.social {
   margin-bottom: 18px;
 }
 
+/* ****** */
+.image-caption-after {
+  position: absolute;
+  font-weight: bold;
+  font-size: 1.5em;
+  background-color: rgba(0,0,0,.6);
+  color: #ffffff;
+  right: 0;
+  top : 0%;
+  height: 35px;
+  border-bottom-left-radius: 30px;
+  /* margin-left: 10px; */
+  /* overflow: hidden;
+  transition: all .4s ease-out; */
+}
+
+.image-caption-before {
+  position: absolute;
+  font-weight: bold;
+  font-size: 1.5em;
+  background-color: rgba(0,0,0,.6);
+  color: #ffffff;
+  left: 0;
+  top : 0%;
+  height: 35px;
+  border-bottom-right-radius: 30px;
+  /* margin-left: 10px; */
+  /* overflow: hidden;
+  transition: all .4s ease-out; */
+}
+/* 
+.image-caption:before {
+  content: "+";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #fff;
+  height: 40px;
+  width: 35px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 2em;
+  font-weight: bold;
+  /* transition: all .4s ease-out; 
+} */
+
+/* .image-caption:hover:before {
+  content: "-";
+  top: 0;
+} */
+
+/* .image-caption:hover {
+  height: 70px;
+} */
+
+.image-caption-after p {
+  margin: 0;
+  padding: .25em 0 .25em 1em ;
+}
+
+.image-caption-before p {
+  margin: 0;
+  padding: .25em 1em .25em 0 ;
+}
+/* ****** */
+ /* .after {
+  position: absolute;
+  top: 5%;
+  left: 80%;
+  transform: translate(0%,0%);
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+  font-family :'Poppins', sans-serif;
+  }
+
+  .before {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    transform: translate(0%,0%);
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    font-family :'Poppins', sans-serif;
+    } */
+
 .comparison-slider-wrapper {
   position: relative;
   width: 100%;
@@ -1392,6 +1484,7 @@ width: 50%;
 overflow: hidden;
 > img {
   display: block;
+}
 }
 .overlay {
   right: auto;
@@ -1460,7 +1553,7 @@ box-sizing: border-box;
 font-size: 12px;
 font-style: italic;
   }
-}
+
 
 .suppoprt-me {
   display: inline-block;
