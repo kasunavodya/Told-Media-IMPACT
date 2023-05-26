@@ -602,6 +602,7 @@ banner
   position: relative;
 }
 
+
 #bg-video {
     min-width: 100%;
     min-height: 100vh;
@@ -615,6 +616,12 @@ banner
     display: none !important;
 }
 
+
+.waves{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 .video-overlay {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.8);
@@ -657,6 +664,7 @@ banner
   color: #f414fa;
   font-weight: 900;
 }
+
 
 
 /*
@@ -1422,7 +1430,7 @@ cursor: ew-resize;
   left: -5px;
   top: 50%;
   margin-top: -6px;
-  background-color: white;
+  background-color: rgb(76, 7, 94);
   transform: rotate(45deg);
   transition: all 0.1s ease-in-out;
 }
@@ -1438,7 +1446,7 @@ cursor: ew-resize;
     height: 20px;
     left: -9px;
     margin-top: -10px;
-    background-color: #555;
+    background-color:rgb(76, 7, 94);
   }
 }
 }
