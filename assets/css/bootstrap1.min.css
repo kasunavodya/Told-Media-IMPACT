@@ -935,7 +935,8 @@ select:disabled{opacity:1}[list]::-webkit-calendar-picker-indicator{display:none
     background-color: #fff;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 8px
+    border-top-left-radius: 70px;
+    border-bottom-right-radius: 70px;
 }
 
 .card>hr {
