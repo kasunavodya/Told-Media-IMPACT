@@ -3422,7 +3422,7 @@ select:disabled{opacity:1}[list]::-webkit-calendar-picker-indicator{display:none
 }
 
 .border-primary {
-    border-color: #13C5DD !important
+    border-color: #000000 !important
 }
 
 .border-secondary {
@@ -4018,7 +4018,7 @@ select:disabled{opacity:1}[list]::-webkit-calendar-picker-indicator{display:none
 
 .py-3 {
     padding-top: 1rem !important;
-    padding-bottom: 1rem !important
+    padding-bottom: 2rem !important
 }
 
 .py-4 {
@@ -4027,8 +4027,8 @@ select:disabled{opacity:1}[list]::-webkit-calendar-picker-indicator{display:none
 }
 
 .py-5 {
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important
 }
 
 .pt-0 {
@@ -4249,7 +4249,7 @@ select:disabled{opacity:1}[list]::-webkit-calendar-picker-indicator{display:none
 }
 
 .text-primary {
-    color: #f414fa !important
+    color: #7d4bd3 !important
 }
 
 .text-secondary {
@@ -4305,7 +4305,7 @@ select:disabled{opacity:1}[list]::-webkit-calendar-picker-indicator{display:none
 }
 
 .bg-primary {
-    background-color: #f414fa !important
+    background-color: #7d4bd3 !important
 }
 
 .bg-secondary {

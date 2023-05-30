@@ -214,3 +214,128 @@ function drags(dragElement, resizeElement, container) {
 		});
 	
 }
+
+/// ** ADDING SOUNDS TO MOUSE OVER EFFECT ON WHAT-WE-DO SECTION **
+var c1 = document.getElementById('card1')
+var c2 = document.getElementById('card2')
+var c3 = document.getElementById('card3')
+var c4 = document.getElementById('card4'),
+    hardtypewriter = document.getElementById('hard-type-writer')
+	audios = document.querySelectorAll('#hard-type-writer');
+console.log(audios);
+
+// ** BTN sound for Social **
+c1.addEventListener('mouseover', function() {
+[].forEach.call(audios, function(audio) {
+  // do whatever
+  audio.play();
+});
+}, false);
+
+c1.addEventListener('mouseleave', function() {
+  hardtypewriter.pause();
+  hardtypewriter.currentTime = 0;
+}, false);
+// ** BTN sound for Web **
+c2.addEventListener('mouseover', function() {
+[].forEach.call(audios, function(audio) {
+  // do whatever
+  audio.play();
+});
+}, false);
+	
+c2.addEventListener('mouseleave', function() {
+   hardtypewriter.pause();
+   hardtypewriter.currentTime = 0;
+}, false);
+// ** BTN sound for Studio **
+c3.addEventListener('mouseover', function() {
+[].forEach.call(audios, function(audio) {
+   // do whatever
+   audio.play();
+});
+}, false);
+		
+c3.addEventListener('mouseleave', function() {
+    hardtypewriter.pause();
+	hardtypewriter.currentTime = 0;
+}, false);
+// ** BTN sound for Branding **
+c4.addEventListener('mouseover', function() {
+[].forEach.call(audios, function(audio) {
+    // do whatever
+    audio.play();
+});
+}, false);
+		
+c4.addEventListener('mouseleave', function() {
+    hardtypewriter.pause();
+	hardtypewriter.currentTime = 0;
+}, false);
+	
+/// ** ADDING SOUNDS TO MOUSE OVER EFFECT ON WHAT-WE-DO SECTION **
+// Divider1
+var divider = document.getElementById('divider1'),
+    hardtypewriter = document.getElementById('drag-sound')
+	audios = document.querySelectorAll('audio');
+console.log(audios);
+
+
+divider.addEventListener('click', function() {
+[].forEach.call(audios, function(audio) {
+  // do whatever
+  audio.play();
+});
+}, false);
+// Divider2
+var divider = document.getElementById('divider2'),
+    hardtypewriter = document.getElementById('drag-sound')
+	audios = document.querySelectorAll('audio');
+console.log(audios);
+
+
+divider.addEventListener('click', function() {
+[].forEach.call(audios, function(audio) {
+  // do whatever
+  audio.play();
+});
+}, false);
+// Divider3
+var divider = document.getElementById('divider3'),
+    hardtypewriter = document.getElementById('drag-sound')
+	audios = document.querySelectorAll('audio');
+console.log(audios);
+
+
+divider.addEventListener('click', function() {
+[].forEach.call(audios, function(audio) {
+  // do whatever
+  audio.play();
+});
+}, false);
+// Divider4
+var divider = document.getElementById('divider4'),
+    hardtypewriter = document.getElementById('drag-sound')
+	audios = document.querySelectorAll('audio');
+console.log(audios);
+
+
+divider.addEventListener('click', function() {
+[].forEach.call(audios, function(audio) {
+  // do whatever
+  audio.play();
+});
+}, false);
+// Divider5
+var divider = document.getElementById('divider5'),
+    hardtypewriter = document.getElementById('drag-sound')
+	audios = document.querySelectorAll('audio');
+console.log(audios);
+
+
+divider.addEventListener('click', function() {
+[].forEach.call(audios, function(audio) {
+  // do whatever
+  audio.play();
+});
+}, false);

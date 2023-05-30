@@ -21,12 +21,96 @@
 
     <link rel="stylesheet" href="assets/css/bootstrap1.min.css">
 
-    <script>
-        function changeImage(imageSrc) {
-            var displayedImage = document.getElementById('displayedImage');
-            displayedImage.src = imageSrc;
+    <style>
+        .slick-list {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
         }
-    </script>
+
+        .slick-list:focus {
+            outline: none;
+        }
+
+        .slick-list.dragging {
+            cursor: pointer;
+            cursor: hand;
+        }
+
+        .slick-slider .slick-track,
+        .slick-slider .slick-list {
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            -ms-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+
+        .slick-track {
+            position: relative;
+            top: 0;
+            left: 0;
+            display: block;
+        }
+
+        .slick-track:before,
+        .slick-track:after {
+            display: table;
+            content: '';
+        }
+
+        .slick-track:after {
+            clear: both;
+        }
+
+        .slick-loading .slick-track {
+            visibility: hidden;
+        }
+
+        .slick-slide {
+            display: none;
+            float: left;
+            height: 100%;
+            min-height: 1px;
+        }
+
+        [dir='rtl'] .slick-slide {
+            float: right;
+        }
+
+        .slick-slide img {
+            display: block;
+        }
+
+        .slick-slide.slick-loading img {
+            display: none;
+        }
+
+        .slick-slide.dragging img {
+            pointer-events: none;
+        }
+
+        .slick-initialized .slick-slide {
+            display: block;
+        }
+
+        .slick-loading .slick-slide {
+            visibility: hidden;
+        }
+
+        .slick-vertical .slick-slide {
+            display: block;
+            height: auto;
+            border: 1px solid transparent;
+        }
+
+        .slick-arrow.slick-hidden {
+            display: none;
+        }
+    </style>
+
 
 </head>
 
@@ -46,13 +130,14 @@
     <!-- ***** Preloader End ***** -->
 
     <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky">
+    <header class="header-area header-sticky" style="background-color: black;">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">I<em>M</em>PACT</a>
+                        <a href="index.html" class="logo"><img src="assets/images/impactLogo2.png"
+                                style="width: 110px; margin: -15px;"></a>
                         <!-- ***** Logo End ***** -->
 
                         <!-- ***** Menu Start ***** -->
@@ -62,7 +147,7 @@
                             <li class="scroll-to-section"><a href="#testimonial">WHAT WE DO</a></li>
                             <li class="scroll-to-section"><a href="#aboutUs">ABOUT US</a></li>
                             <li class="scroll-to-section"><a href="#brands">BRANDS</a></li>
-                            <li class="main-button"><a href="#">CONTACT</a></li>
+                            <li class="main-button"><a href="https://formsubmit.co/el/biheve">CONTACT</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -76,307 +161,191 @@
 
     <div class="main-banner" id="top">
         <video autoplay muted loop id="bg-video">
-            <source
-                src="https://joy1.videvo.net/videvo_files/video/free/2018-05/large_watermarked/180503_02_PurpleGrid_preview.mp4"
-                type="video/mp4" />
+            <source src="./assets/video/DigitalMarketingServices.mp4" type="video/mp4" />
         </video>
+    </div>
 
-        <div class="video-overlay header-text">
-            <div class="caption">
-                <h6>work harder, get stronger</h6>
-                <h2>I<em>M</em>PACT</h2>
-                <div class="main-button scroll-to-section">
-                    <a href="#contact">Contact</a>
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#ffffff" fill-opacity="1" d="M0,32L48,
+        42.7C96,53,192,75,288,101.3C384,128,480,160,576,186.7C672,213,768,235,864,256C960,277,1056,299,1152,288C1248,
+        277,1344,235,1392,213.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,
+        320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+
+    <!-- Facts Start -->
+    <div class="container-xxl py-3">
+        <div class="container">
+            <h1 class="text-dark">
+                <center>
+                    <h2 class="text-primary text-uppercase" style="letter-spacing: 5px; display: inline;
+                    border-bottom: 3px solid #000000;"><b>Our Works</b></h2>
+                </center>
+            </h1><br>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="comparison-slider-wrapper"
+                        style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                        <div class="comparison-slider">
+                            <img src="./assets/images/impact1New.jpg" alt="marioPhoto 2">
+                            <div class="resize">
+                                <img src="./assets/images/impact1Old.jpg" alt="marioPhoto 1">
+                            </div>
+                            <div class="divider" id="devider1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="comparison-slider-wrapper"
+                        style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                        <div class="comparison-slider">
+                            <img src="./assets/images/impact2New.jpg" alt="marioPhoto 2">
+                            <div class="resize">
+                                <img src="./assets/images/impact2Old.jpg" alt="marioPhoto 1">
+                            </div>
+                            <div class="divider" id="devider1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="comparison-slider-wrapper"
+                        style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                        <div class="comparison-slider">
+                            <img src="./assets/images/impact3Old.jpg" alt="marioPhoto 2">
+                            <div class="resize">
+                                <img src="./assets/images/impact3New.jpg" alt="marioPhoto 1">
+                            </div>
+                            <div class="divider" id="devider1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="comparison-slider-wrapper"
+                        style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                        <div class="comparison-slider">
+                            <img src="./assets/images/impact4Old.jpg" alt="marioPhoto 2">
+                            <div class="resize">
+                                <img src="./assets/images/impact4New.jpg" alt="marioPhoto 1">
+                            </div>
+                            <div class="divider" id="devider1"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Facts End -->
 
-    <!-- Our Works Section - START -->
-    <section id="ourWorks">
-        <div class="container-fluid" style="margin-top: -8px;">
-
-            <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path fill="#000000" fill-opacity="1" d="M0,32L48,
-            42.7C96,53,192,75,288,101.3C384,128,480,160,576,186.7C672,213,768,235,864,256C960,277,1056,299,1152,288C1248,
-            277,1344,235,1392,213.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,
-            320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-            </svg>
-
-            <!-- Background animtion-->
-            <div class="background" style="height: auto;">
-                <div class="cube"></div>
-                <div class="cube"></div>
-                <div class="cube"></div>
-                <div class="cube"></div>
-                <div class="cube"></div>
-
-                <div class="py-5">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div>
-                                    <div>
-                                        <div class="container">
-                                            <div class="inner">
-                                                <div class="comparison-slider-wrapper">
-                                                    <div class="comparison-slider">
-                                                        <img src="./assets/images/impact1New.jpg" alt="marioPhoto 2">
-                                                        <div class="image-caption-after">
-                                                            <p style="color: white;">After &nbsp;&nbsp;</p>
-                                                        </div>
-                                                        <div class="resize">
-                                                            <img src="./assets/images/impact1Old.jpg"
-                                                                alt="marioPhoto 1">
-                                                            <div class="image-caption-before">
-                                                                <p style="color: white;"> &nbsp;&nbsp;Before</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="divider"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><br>
-                            <div class="col-md-4">
-                                <div>
-                                    <div>
-                                        <div class="container">
-                                            <div class="inner">
-                                                <div class="comparison-slider-wrapper">
-                                                    <div class="comparison-slider">
-                                                        <img src="./assets/images/impact2New.jpg" alt="marioPhoto 2">
-                                                        <div class="image-caption-after">
-                                                            <p style="color: white;">After &nbsp;&nbsp;</p>
-                                                        </div>
-                                                        <div class="resize">
-                                                            <img src="./assets/images/impact2Old.jpg"
-                                                                alt="marioPhoto 1">
-                                                            <div class="image-caption-before">
-                                                                <p style="color: white;"> &nbsp;&nbsp;Before</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="divider"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div>
-                                    <div>
-                                        <div class="container">
-                                            <div class="inner">
-                                                <div class="comparison-slider-wrapper">
-                                                    <div class="comparison-slider">
-                                                        <img src="./assets/images/impact3New.jpg" alt="marioPhoto 2">
-                                                        <div class="image-caption-after">
-                                                            <p style="color: white;">After &nbsp;&nbsp;</p>
-                                                        </div>
-                                                        <div class="resize">
-                                                            <img src="./assets/images/impact3Old.jpg"
-                                                                alt="marioPhoto 1">
-                                                            <div class="image-caption-before">
-                                                                <p style="color: white;"> &nbsp;&nbsp;Before</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="divider"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row justify-content-center">
-                            <div class="col-md-4">
-                                <div>
-                                    <div>
-                                        <div class="container">
-                                            <div class="inner">
-                                                <div class="comparison-slider-wrapper">
-                                                    <div class="comparison-slider">
-                                                        <img src="./assets/images/impact4New.jpg" alt="marioPhoto 2">
-                                                        <div class="image-caption-after">
-                                                            <p style="color: white;">After &nbsp;&nbsp;</p>
-                                                        </div>
-                                                        <div class="resize">
-                                                            <img src="./assets/images/impact4Old.jpg"
-                                                                alt="marioPhoto 1">
-                                                            <div class="image-caption-before">
-                                                                <p style="color: white;"> &nbsp;&nbsp;Before</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="divider"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><br>
-                            <div class="col-md-4">
-                                <div>
-                                    <div>
-                                        <div class="container">
-                                            <div class="inner">
-                                                <div class="comparison-slider-wrapper">
-                                                    <div class="comparison-slider">
-                                                        <img src="./assets/images/impact5New.jpg" alt="marioPhoto 2">
-                                                        <div class="image-caption-after">
-                                                            <p style="color: white;">After &nbsp;&nbsp;</p>
-                                                        </div>
-                                                        <div class="resize">
-                                                            <img src="./assets/images/impact5Old.jpg"
-                                                                alt="marioPhoto 1">
-                                                            <div class="image-caption-before">
-                                                                <p style="color: white;"> &nbsp;&nbsp;Before</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="divider"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Our Works Section - END -->
-
-    <!-- What We Do Section - START -->
-    <section class="testimonial" id="testimonial">
-        <div class="header">
-            <div style="margin: 3%;">
+    <!-- Services Start -->
+    <div class="container-fluid bg-primary py-5 wow fadeInUp" data-wow-delay="0.1s" style = "background: radial-gradient(circle farthest-side, #d0c4c4, #7d4bd3);">
+        <div class="container" style="margin-top: -10px;">
+            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
                 <h1 class="text-dark">
                     <center>
-                        <h2 class="text-primary text-uppercase" style="letter-spacing: 5px;"><b>What We Do</b></h2>
+                        <h2 class="text-white text-uppercase" style="letter-spacing: 5px; display: inline;
+                        border-bottom: 3px solid #000000;"><b>What We Do</b></h2>
                     </center>
-                </h1><br>
-                <div class="particles">
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
+                </h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+                    <div class="service-item bg-light border-bottom border-5 border-primary rounded">
+                        <div class="position-relative p-5">
+                            <i class="fa fa-user d-block display-5 fw-normal text-primary mb-3"
+                                style="font-size: 50px;"></i>
+                            <h5 class="text-primary mb-3">CELEBRITY & INFLUENCER MARKETING</h5>
+                            <p>With an extensive portfolio working with multiple influencers and content creators in Sri
+                                Lanka, We find you the perfect moment and influencer to push your marketing campaigns.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="containerNew">
-                    <div class="card" id="card1" style="padding: 2%;"
-                        onmouseover="changeImage('https://cdn.dribbble.com/userupload/2644975/file/original-26c272338ca006f1666ec20189d85eb9.png?resize=400x0')">
-                        <h1 class="text-dark">
-                            <center>SOCIAL</center>
-                        </h1>
-                        <div class="tag-container" style="justify-content: center;">
-                            <span class="tag">Content Creation</span>
-                            <span class="tag">Reporting</span>
-                            <span class="tag">Campaigns</span>
-                        </div>
-                        <div class="tag-container" style="justify-content: center;">
-                            <span class="tag">Promotional Design</span>
-                            <span class="tag">Community Management</span>
-                        </div>
-                    </div>
-
-                    <div class="rowNew">
-                        <div class="box box-web">
-                            <div class="card" id="card2" style="padding: 3%; margin-top: 10%;"
-                                onmouseover="changeImage('https://www.xi-digital.com/uploads/upload/web_design.jpg')">
-                                <br>
-                                <h1 class="text-dark">
-                                    <center>WEB</center>
-                                </h1>
-                                <div class="tag-container" style="justify-content: center;">
-                                    <span class="tag">&nbsp;Website Design&nbsp;&nbsp;</span>
-                                    <span class="tag">Website Hosting</span>
-                                    <span class="tag">Search Engine Optimization (SEO)</span>
-                                </div>
-                                <br><br>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="gradientDiv">
-                                <div class="innerDiv">
-                                    <img id="displayedImage"
-                                        src="https://i.pinimg.com/736x/09/f2/a8/09f2a8a98430c8d410bfd305b4d1973d--planks-film-camera.jpg"
-                                        class="img-thumbnail img-responsive">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box box-social">
-                            <div class="card" id="card3" style="padding: 3%; margin-top: 10%;"
-                                onmouseover="changeImage('https://i.pinimg.com/736x/09/f2/a8/09f2a8a98430c8d410bfd305b4d1973d--planks-film-camera.jpg')">
-                                <br>
-                                <h1 class="text-dark">
-                                    <center>STUDIO</center>
-                                </h1>
-                                <div class="tag-container" style="justify-content: center;">
-                                    <span class="tag">FilmMaking</span>
-                                    <span class="tag">Photography</span>
-                                    <span class="tag">Post Production</span>
-                                </div>
-                                <div class="tag-container" style="justify-content: center;">
-                                    <span class="tag">3D Animationt</span>
-                                    <span class="tag">Color grading</span>
-                                </div>
-                                <br><br>
-                            </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
+                    <div class="service-item bg-light border-bottom border-5 border-primary rounded">
+                        <div class="position-relative p-5">
+                            <i class="fa fa-camera d-block display-5 fw-normal text-primary mb-3"
+                                style="font-size: 50px;"></i>
+                            <h5 class="text-primary mb-3">DIGITAL MARKETING</h5>
+                            <p>
+                                <i class="fa fa-chevron-right text-primary me-3"></i>Digital Marketing Strategy &
+                                Ideation<br>
+                                <i class="fa fa-chevron-right text-primary me-3"></i>Brand Management<br>
+                                <i class="fa fa-chevron-right text-primary me-3"></i>Content Marketing<br>
+                                <i class="fa fa-chevron-right text-primary me-3"></i>Social/Digital Content
+                                Management<br>
+                                <i class="fa fa-chevron-right text-primary me-3"></i>Online Advertising<br>
+                                <i class="fa fa-chevron-right text-primary me-3"></i>SEO
+                            </p>
                         </div>
                     </div>
-                    <div class="card" id="card4" style="padding: 2%; margin-top: 2%;"
-                        onmouseover="changeImage('https://i.pinimg.com/600x315/d0/ce/11/d0ce11adf6a3315a35095f7831220e73.jpg')">
-                        <h1 class="text-dark">
-                            <center>BRANDING</center>
-                        </h1>
-                        <div class="tag-container" style="justify-content: center;">
-                            <span class="tag">Brand Identity Design</span>
-                            <span class="tag">Illustration</span>
-                            <span class="tag">UI Design</span>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
+                    <div class="service-item bg-light border-bottom border-5 border-primary rounded">
+                        <div class="position-relative p-5">
+                            <i class="fa fa-gift d-block display-5 fw-normal text-primary mb-3"
+                                style="font-size: 50px;"></i>
+                            <h5 class="text-primary mb-3">INTEGRATED CREATIVE SOLUTIONS</h5>
+                            <p>
+                                <i class="fa fa-chevron-right text-primary me-3"></i>Creative Brand Strategy &
+                                Development<br>
+                                <i class="fa fa-chevron-right text-primary me-3"></i>Logo Design & Corporate
+                                Identity<br>
+                                <i class="fa fa-chevron-right text-primary me-3"></i>ATL & BTL Advertising<br>
+                                <i class="fa fa-chevron-right text-primary me-3"></i>TTL Advertising<br>
+                                <i class="fa fa-chevron-right text-primary me-3"></i>Product & Packaging Design<br>
                         </div>
-                        <div class="tag-container" style="justify-content: center;">
-                            <span class="tag">Packaging Design</span>
-                            <span class="tag">Merch Design</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+                    <div class="service-item bg-light border-bottom border-5 border-primary rounded">
+                        <div class="position-relative p-5">
+                            <i class="fa fa-laptop d-block display-5 fw-normal text-primary mb-3"
+                                style="font-size: 50px;"></i>
+                            <h5 class="text-primary mb-3">IT DEVELOPMENT</h5>
+                            <p>
+                                <i class="fa fa-chevron-right text-primary me-3"></i>Social Media Apps<br>
+                                <i class="fa fa-chevron-right text-primary me-3"></i>Website Development<br>
+                                <i class="fa fa-chevron-right text-primary me-3"></i>Mobile Application
+                                Development<br><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+                    <div class="service-item bg-light border-bottom border-5 border-primary rounded">
+                        <div class="position-relative p-5">
+                            <i class="fa fa-calendar d-block display-5 fw-normal text-primary mb-3"
+                                style="font-size: 50px;"></i>
+                            <h5 class="text-primary mb-3">EVENT MANAGEMENT</h5>
+                            <p>
+                                <i class="fa fa-chevron-right text-primary me-3"></i>Corporate Event<br>
+                                <i class="fa fa-chevron-right text-primary me-3"></i>Virtual Events<br>
+                                <i class="fa fa-chevron-right text-primary me-3"></i>Event Management<br>
+                                <i class="fa fa-chevron-right text-primary me-3"></i>Product Launch<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
+                    <div class="service-item bg-light border-bottom border-5 border-primary rounded">
+                        <div class="position-relative p-5">
+                            <i class="fa fa-film d-block display-5 fw-normal text-primary mb-3"
+                                style="font-size: 50px;"></i>
+                            <h5 class="text-primary mb-3">CREATIVE PRODUCTION</h5>
+                            <p>
+                                <i class="fa fa-chevron-right text-primary me-3"></i>Motion Graphics<br>
+                                <i class="fa fa-chevron-right text-primary me-3"></i>Text Based Animation<br>
+                                <i class="fa fa-chevron-right text-primary me-3"></i>2D and 3D Animation<br>
+                                <i class="fa fa-chevron-right text-primary me-3"></i>Film Production<br>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- What We Do Section - END -->
+    </div>
+    <!-- Services End -->
 
+    <!-- About Section - START -->
     <section id="aboutUs">
-        <!-- About Section - START -->
         <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="container">
                 <div class="row gx-5">
@@ -384,8 +353,7 @@
                         <div class="position-relative h-100">
                             <div class="gradientDiv">
                                 <div class="innerDiv">
-                                    <img id="displayedImage"
-                                        src="https://img.freepik.com/free-photo/group-people-with-smartphones-tablets_273609-10724.jpg?w=900&t=st=1685097842~exp=1685098442~hmac=ef56517f3f9854a7a046f142206896ac715fc93c7ffa90dc35d5a72c3b9b34c5"
+                                    <img id="displayedImage" src="./assets/images/about.jpg"
                                         class="img-thumbnail img-responsive w-100 h-100" style="object-fit: cover;">
                                 </div>
                             </div>
@@ -393,11 +361,14 @@
                     </div>
                     <div class="col-lg-7">
                         <div class="mb-4">
-                            <h2 class="text-primary text-uppercase" style="letter-spacing: 5px;"><b>About Us</b>
+                            <h2 class="text-primary text-uppercase" style="letter-spacing: 5px; display: inline;
+                            border-bottom: 3px solid #000000;"><b>About Us</b>
                             </h2>
-                            <h1 class="display-5 mb-0">Exploring New Frontiers for Brand Growth</h1>
+                            <h1 class="display-5 text-dark" style="margin-top: 3%;">Exploring New Frontiers for
+                                Brand Growth</h1>
                         </div>
-                        <p class="mb-5">Welcome to Impact, where we believe in the transformative power of digital
+                        <p class="mb-5">Welcome to Impact, where we believe in the
+                            transformative power of digital
                             marketing. Our story is one of passion, innovation, and a relentless drive to help
                             businesses thrive in the dynamic online landscape. <br><br> From our humble beginnings,
                             we set out on a mission to make a significant impact on brands' success through
@@ -411,164 +382,196 @@
                 </div>
             </div>
         </div>
-    </section>
+        <!-- About Section - END -->
 
-    <!-- Brands Section - START -->
-    <section id="brands">
-        <div class="container1"
-            style="padding: 40px; background-image: linear-gradient(45deg, rgb(78, 0, 109) 10%, rgb(13, 0, 15) 100%);">
-            <div style="margin: 3%;">
-                <h1 class="text-white">
-                    <center>
-                        <h2 class="text-primary text-uppercase" style="letter-spacing: 5px;"><b>BRANDS WE HAVE WORKED
-                                WITH</b></h2>
-                    </center>
-                </h1><br>
-                <div class="row">
-                    <div class="logo-container">
-                        <img src="./assets/images/1.png" alt="Logo 1" width="200" height="200">
-                    </div>
-                    <div class="logo-container">
-                        <img src="./assets/images/2.png" alt="Logo 2" width="200" height="200">
-                    </div>
-                    <div class="logo-container">
-                        <img src="./assets/images/3.png" alt="Logo 3" width="200" height="200">
-                    </div>
-                    <div class="logo-container">
-                        <img src="./assets/images/4.png" alt="Logo 4" width="200" height="200">
-                    </div>
-                    <div class="logo-container">
-                        <img src="./assets/images/5.png" alt="Logo 4" width="200" height="200">
-                    </div>
-                    <div class="logo-container">
-                        <img src="./assets/images/6.png" alt="Logo 4" width="200" height="200">
-                    </div>
+        <!-- Services Start -->
+        <div class="container-fluid bg-primary py-5 wow fadeInUp" data-wow-delay="0.1s" style = "background-color: #7d4bd3; background-image: linear-gradient(#7d4bd3, #000000);">
+            <div class="container" style="margin-top: -10px;">
+                <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+                    <h1 class="text-dark">
+                        <center>
+                            <h2 class="text-white text-uppercase" style="letter-spacing: 5px; display: inline;
+                        border-bottom: 3px solid #000000;"><b>BRANDS WE HAVE WORKED
+                                    WITH</b></h2>
+                        </center>
+                    </h1>
                 </div>
-                <div class="row">
-                    <div class="logo-container">
-                        <img src="./assets/images/7.png" alt="Logo 1" width="200" height="200">
-                    </div>
-                    <div class="logo-container">
-                        <img src="./assets/images/8.png" alt="Logo 2" width="200" height="200">
-                    </div>
-                    <div class="logo-container">
-                        <img src="./assets/images/9.png" alt="Logo 3" width="200" height="200">
-                    </div>
-                    <div class="logo-container">
-                        <img src="./assets/images/10.png" alt="Logo 4" width="200" height="200">
-                    </div>
-                    <div class="logo-container">
-                        <img src="./assets/images/11.png" alt="Logo 4" width="200" height="200">
-                    </div>
-                    <div class="logo-container">
-                        <img src="./assets/images/12.png" alt="Logo 4" width="200" height="200">
-                    </div>
-                </div>
+                <section class="customer-logos slider">
+                    <div class="slide"><img src="./assets/images/1.png" alt="Logo 1" width="150" height="170"></div>
+                    <div class="slide"><img src="./assets/images/2.png" alt="Logo 1" width="150" height="170"></div>
+                    <div class="slide"><img src="./assets/images/3.png" alt="Logo 1" width="150" height="170"></div>
+                    <div class="slide"><img src="./assets/images/4.png" alt="Logo 1" width="150" height="170"></div>
+                    <div class="slide"><img src="./assets/images/5.png" alt="Logo 1" width="150" height="170"></div>
+                    <div class="slide"><img src="./assets/images/6.png" alt="Logo 1" width="150" height="170"></div>
+                    <div class="slide"><img src="./assets/images/7.png" alt="Logo 1" width="150" height="170"></div>
+                    <div class="slide"><img src="./assets/images/8.png" alt="Logo 1" width="150" height="170"></div>
+                    <div class="slide"><img src="./assets/images/9.png" alt="Logo 1" width="150" height="170"></div>
+                    <div class="slide"><img src="./assets/images/10.png" alt="Logo 1" width="150" height="170"></div>
+                    <div class="slide"><img src="./assets/images/11.png" alt="Logo 1" width="150" height="170"></div>
+                    <div class="slide"><img src="./assets/images/12.png" alt="Logo 1" width="150" height="170"></div>
+                </section>
             </div>
         </div>
-    </section>
-    <!-- Brands Section - END -->
+        <!-- Services End -->
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
-                        Get In Touch</h4>
-                    <p class="mb-4">At Impact, we offer a unique proposition that sets us apart from the competition.
-                    </p>
-                    <p class="mb-2"><i class="fa fa-location-arrow text-primary me-3"></i>383 1/1 Serpentine Rd, Colombo
-                        08, SL
-                    </p>
-                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>info@told.media</p>
-                    <p class="mb-0"><i class="fa fa-phone text-primary me-3"></i>+94 770 778653</p>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
-                        Quick Links</h4>
-                    <div class="d-flex flex-column justify-content-start">
-                        <a class="text-light mb-2" href="index.html"><i class="fa fa-angle-right me-2"></i>Home</a>
-                        <a class="text-light mb-2" href="#ourWorks"><i class="fa fa-angle-right me-2"></i>Our Works</a>
-                        <a class="text-light mb-2" href="#testimonial"><i class="fa fa-angle-right me-2"></i>What We
-                            Do</a>
-                        <a class="text-light mb-2" href="#aboutUs"><i class="fa fa-angle-right me-2"></i>About Us</a>
-                        <a class="text-light mb-2" href="#brands"><i class="fa fa-angle-right me-2"></i>Brands</a>
+        <!-- Footer Start -->
+        <div class="container-fluid text-light" style = "background-color: #000000;">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h4
+                            class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
+                            Get In Touch</h4>
+                        <p class="mb-4" style="color: #bcb4bf;">At Impact, we offer a unique proposition that sets
+                            us apart from the competition.
+                        </p>
+                        <p class="mb-2" style="color: #bcb4bf;"><i
+                                class="fa fa-location-arrow text-primary me-3"></i>383 1/1 Serpentine Rd, Colombo
+                            08, SL
+                        </p>
+                        <p class="mb-2" style="color: #bcb4bf;"><i
+                                class="fa fa-envelope text-primary me-3"></i>info@told.media</p>
+                        <p class="mb-0" style="color: #bcb4bf;"><i class="fa fa-phone text-primary me-3"></i>+94 770
+                            778653</p>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
-                        Popular Links</h4>
-                    <div class="d-flex flex-column justify-content-start">
-                        <a class="text-light mb-2" href="#testimonial"><i class="fa fa-angle-right me-2"></i>Social</a>
-                        <a class="text-light mb-2" href="#testimonial"><i class="fa fa-angle-right me-2"></i>Web</a>
-                        <a class="text-light mb-2" href="#testimonial"><i class="fa fa-angle-right me-2"></i>Studio</a>
-                        <a class="text-light mb-2" href="#testimonial"><i
-                                class="fa fa-angle-right me-2"></i>Branding</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
-                        Contact Us</h4>
-                    <form action="">
-                        <div class="input-group">
-                            <button class="btn" style="background-color: #f414fa; color: white;"><i
-                                    class="fa fa-phone text-white" aria-hidden="true"></i>&nbsp;&nbsp;Contact</button>
+                    <div class="col-lg-3 col-md-6">
+                        <h4
+                            class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
+                            Quick Links</h4>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-light mb-2" href="index.html"><i class="fa fa-angle-right me-2"></i>Home</a>
+                            <a class="text-light mb-2" href="#ourWorks"><i class="fa fa-angle-right me-2"></i>Our
+                                Works</a>
+                            <a class="text-light mb-2" href="#testimonial"><i class="fa fa-angle-right me-2"></i>What We
+                                Do</a>
+                            <a class="text-light mb-2" href="#aboutUs"><i class="fa fa-angle-right me-2"></i>About
+                                Us</a>
+                            <a class="text-light mb-2" href="#brands"><i class="fa fa-angle-right me-2"></i>Brands</a>
                         </div>
-                    </form>
-                    <h6 class="text-primary text-uppercase mt-4 mb-3">Follow Us</h6>
-                    <div class="d-flex">
-                        <a class="btn btn-lg btn-lg-square rounded-circle me-2" style="background-color: #f414fa;"
-                            href="#"><i class="fa fa-facebook-official text-white"></i></a>
-                        <a class="btn btn-lg btn-lg-square rounded-circle me-2" style="background-color: #f414fa;"
-                            href="#"><i class="fa fa-linkedin-square text-white"></i></a>
-                        <a class="btn btn-lg btn-lg-square rounded-circle" style="background-color: #f414fa;"
-                            href="#"><i class="fa fa-instagram text-white"></i></a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4
+                            class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
+                            Contact Us</h4>
+                        <div class="input-group">
+                            <a href="https://formsubmit.co/el/biheve" class="btn"
+                                style="background-color: #7d4bd3; color: white;"><i class="fa fa-phone text-white"
+                                    aria-hidden="true">&nbsp;&nbsp;&nbsp;Contact</i></a>
+                        </div>
+                        <h6 class="text-primary text-uppercase mt-4 mb-3">Follow Us</h6>
+                        <div class="d-flex mb-4">
+                            <a class="btn btn-lg btn-lg-square rounded-circle me-2" style="background-color: #7d4bd3;"
+                                href="https://www.facebook.com/profile.php?id=100088158816375"><i
+                                    class="fa fa-facebook-official text-white"></i></a>
+                            <a class="btn btn-lg btn-lg-square rounded-circle me-2" style="background-color: #7d4bd3;"
+                                href="https://www.linkedin.com/company/told-media/mycompany/"><i
+                                    class="fa fa-linkedin-square text-white"></i></a>
+                            <a class="btn btn-lg btn-lg-square rounded-circle" style="background-color: #7d4bd3;"
+                                href="https://www.instagram.com/told_media/"><i
+                                    class="fa fa-instagram text-white"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <img src="assets/images/qrCode.jpg" style="width: 60%; margin-top: 10px;">
                     </div>
                 </div>
             </div>
         </div>
 
-    </div>
-    <div class="container-fluid bg-dark text-light border-top border-secondary py-4">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-md-0">&copy; <a class="text-primary" href="#">Impact</a>. All Rights
-                        Reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <p class="mb-0">Designed by <a class="text-primary" href="https://htmlcodex.com">Told Media PVT
-                            LTD</a>
-                    </p>
+        <div class="container-fluid text-light border-top border-secondary py-4" style = "background-color: #000000;">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-md-0">&copy; <a class="text-primary" href="#">Impact</a>. All Rights
+                            Reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <p class="mb-0">Designed by <a class="text-primary" href="https://htmlcodex.com">Told Media
+                                PVT
+                                LTD</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Footer End -->
+        <!-- Footer End -->
 
+        <!-- Back to top button -->
+        <a id="topButton"></a>
 
-    <!-- jQuery -->
-    <script src="assets/js/jquery-2.1.0.min.js"></script>
+        <!-- jQuery -->
+        <script src="assets/js/jquery-2.1.0.min.js"></script>
 
-    <!-- Bootstrap -->
-    <script src="assets/js/popper.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="assets/js/popper.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
 
-    <!-- Plugins -->
-    <script src="assets/js/scrollreveal.min.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/imgfix.min.js"></script>
-    <script src="assets/js/mixitup.js"></script>
-    <script src="assets/js/accordions.js"></script>
+        <!-- Plugins -->
+        <script src="assets/js/scrollreveal.min.js"></script>
+        <script src="assets/js/waypoints.min.js"></script>
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <script src="assets/js/imgfix.min.js"></script>
+        <script src="assets/js/mixitup.js"></script>
+        <script src="assets/js/accordions.js"></script>
 
-    <!-- Global Init -->
-    <script src="assets/js/custom.js"></script>
+        <!-- Global Init -->
+        <script src="assets/js/custom.js"></script>
 
-    <script>
-        initComparisons();
-    </script>
+        <script>
+            initComparisons();
+        </script>
+
+        <script>
+            function changeImage(imageSrc) {
+                var displayedImage = document.getElementById('displayedImage');
+                displayedImage.src = imageSrc;
+            }
+        </script>
+
+        <script>
+            var btn = $('#topButton');
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 300) {
+                    btn.addClass('show');
+                } else {
+                    btn.removeClass('show');
+                }
+            });
+
+            btn.on('click', function (e) {
+                e.preventDefault();
+                $('html, body').animate({ scrollTop: 0 }, '300');
+            });
+        </script>
+
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('.customer-logos').slick({
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 1500,
+                    arrows: false,
+                    dots: false,
+                    pauseOnHover: false,
+                    responsive: [{
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 4
+                        }
+                    }, {
+                        breakpoint: 520,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    }]
+                });
+            });
+        </script>
 
 </body>
 
